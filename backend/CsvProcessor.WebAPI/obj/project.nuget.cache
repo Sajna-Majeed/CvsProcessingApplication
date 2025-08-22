@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "dgSpecHash": "ScxYZWfSkvA=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\BoomBastic\\source\\repos\\CsvProcessingApplication\\backend\\CsvProcessor.WebAPI\\CsvProcessor.WebAPI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\BoomBastic\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.8\\microsoft.aspnetcore.openapi.9.0.8.nupkg.sha512",
+    "C:\\Users\\BoomBastic\\.nuget\\packages\\microsoft.openapi\\1.6.17\\microsoft.openapi.1.6.17.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1900",
+      "level": "Warning",
+      "message": "Error occurred while getting package vulnerability data: No such host is known. (api.nuget.org:443)",
+      "projectPath": "C:\\Users\\BoomBastic\\source\\repos\\CsvProcessingApplication\\backend\\CsvProcessor.WebAPI\\CsvProcessor.WebAPI.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\BoomBastic\\source\\repos\\CsvProcessingApplication\\backend\\CsvProcessor.WebAPI\\CsvProcessor.WebAPI.csproj",
+      "targetGraphs": []
+    }
+  ]
+}
