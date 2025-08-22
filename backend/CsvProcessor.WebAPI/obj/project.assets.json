@@ -33,6 +33,42 @@
             "related": ".pdb;.xml"
           }
         }
+      },
+      "CsvProcessor.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "CsvProcessor.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CsvProcessor.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CsvProcessor.Application.dll": {}
+        }
+      },
+      "CsvProcessor.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/CsvProcessor.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CsvProcessor.Domain.dll": {}
+        }
+      },
+      "CsvProcessor.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "CsvProcessor.Application": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CsvProcessor.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CsvProcessor.Infrastructure.dll": {}
+        }
       }
     }
   },
@@ -67,10 +103,27 @@
         "microsoft.openapi.1.6.17.nupkg.sha512",
         "microsoft.openapi.nuspec"
       ]
+    },
+    "CsvProcessor.Application/1.0.0": {
+      "type": "project",
+      "path": "../CsvProcessor.Application/CsvProcessor.Application.csproj",
+      "msbuildProject": "../CsvProcessor.Application/CsvProcessor.Application.csproj"
+    },
+    "CsvProcessor.Domain/1.0.0": {
+      "type": "project",
+      "path": "../CsvProcessor.Domain/CsvProcessor.Domain.csproj",
+      "msbuildProject": "../CsvProcessor.Domain/CsvProcessor.Domain.csproj"
+    },
+    "CsvProcessor.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../CsvProcessor.Infrastructure/CsvProcessor.Infrastructure.csproj",
+      "msbuildProject": "../CsvProcessor.Infrastructure/CsvProcessor.Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net9.0": [
+      "CsvProcessor.Application >= 1.0.0",
+      "CsvProcessor.Infrastructure >= 1.0.0",
       "Microsoft.AspNetCore.OpenApi >= 9.0.8"
     ]
   },
@@ -105,7 +158,14 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\BoomBastic\\source\\repos\\CsvProcessingApplication\\backend\\CsvProcessor.Application\\CsvProcessor.Application.csproj": {
+              "projectPath": "C:\\Users\\BoomBastic\\source\\repos\\CsvProcessingApplication\\backend\\CsvProcessor.Application\\CsvProcessor.Application.csproj"
+            },
+            "C:\\Users\\BoomBastic\\source\\repos\\CsvProcessingApplication\\backend\\CsvProcessor.Infrastructure\\CsvProcessor.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\BoomBastic\\source\\repos\\CsvProcessingApplication\\backend\\CsvProcessor.Infrastructure\\CsvProcessor.Infrastructure.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -151,13 +211,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1900",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Error occurred while getting package vulnerability data: No such host is known. (api.nuget.org:443)"
-    }
-  ]
+  }
 }
